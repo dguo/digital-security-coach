@@ -1,0 +1,2 @@
+# Override core.autocrlf settings to keep line endings consistent
+* text=auto
