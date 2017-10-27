@@ -1,22 +1,22 @@
-body {
-    font-family: 'Open Sans', sans-serif;
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif !important;
 }
 
-header {
-    padding: 1.3rem;
-    margin-bottom: 1.3rem;
+#selling-points {
+    width: 320px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-header h1 {
-    font-size: 1.5rem;
-    margin-bottom: 0;
+#content .segment {
+    border-width: 0;
 }
 
-footer {
-    padding: 30px;
-    color: #808080;
+#share .button {
+    margin-top: 0.5em;
 }
 
-footer p {
-    margin-bottom: 0;
+#feedback {
+    margin-top: 1.5em;
 }

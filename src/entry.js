@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+import 'whatwg-fetch';
 import 'autotrack/lib/plugins/outbound-link-tracker';
 import React from 'react';
 import ReactDOM from 'react-dom';

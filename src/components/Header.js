@@ -1,14 +1,13 @@
 import React from 'react';
+import {Header as SUIHeader, Icon, Segment} from 'semantic-ui-react';
 
 const Header = () => {
     return (
-        <header className="navbar bg-dark">
-            <section className="navbar-section" />
-            <section className="navbar-center">
-                <h1 className="text-light">Digital Security Coach</h1>
-            </section>
-            <section className="navbar-section" />
-        </header>
+        <Segment attached color="green" inverted textAlign="center">
+            <SUIHeader as="h1" style={{margin: "0 auto", display: "initial"}}
+                icon="shield" content="Digital Security Coach"
+                size="huge" />
+        </Segment>
     );
 };
 
