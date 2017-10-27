@@ -1,36 +1,55 @@
 const API = 'https://haveibeenpwned.com/api/v2';
 
 export async function checkForBreaches(email) {
-    try {
-        const response = await fetch(`${API}/breachedaccount/${email}`);
+    const response = await fetch(`${API}/breachedaccount/${email}`);
+    if (response.status === 200) {
         const json = await response.json();
-        console.log('breaches:', json);
-    } catch (error) {
-        console.error(error);
+        return json;
+    } else if (response.status === 404) {
+        return [];
+    } else {
+        return Promise.reject({responseCode: response.status});
     }
 }
 
 export async function checkForPastes(email) {
-    try {
-        const response = await fetch(`${API}/pasteaccount/${email}`);
+    const response = await fetch(`${API}/pasteaccount/${email}`);
+    if (response.status === 200) {
         const json = await response.json();
-        console.log('pastes:', json);
-    } catch (error) {
-        console.error(error);
+        return json;
+    } else if (response.status === 404) {
+        return [];
+    } else {
+        return Promise.reject({responseCode: response.status});
+    }
+}
+
+export function getPasteUrl(source, id) {
+    switch (source) {
+        case 'Pastebin':
+            return `https://pastebin.com/${id}`;
+        case 'Slexy':
+            return `https://slexy.org/view/${id}`;
+        case 'Ghostbin':
+            return `https://ghostbin.com/paste/${id}`;
+        case 'JustPaste':
+            return `https://justpaste.it/${id}`;
+        case 'AdHocUrl':
+        case 'OptOut':
+        case 'Pastie':
+        case 'QuickLeak':
+        default:
+            return '';
     }
 }
 
 export async function checkPassword(password) {
-    try {
-        const response = await fetch(`${API}/pwnedpassword/${password}`);
-        if (response.status === 200) {
-            return true;
-        } else if (response.status === 404) {
-            return false;
-        }
-
-        throw new Error('Bad response');
-    } catch (error) {
-        console.error(error);
+    const response = await fetch(`${API}/pwnedpassword/${password}`);
+    if (response.status === 200) {
+        return true;
+    } else if (response.status === 404) {
+        return false;
+    } else {
+        return Promise.reject({responseCode: response.status});
     }
 }

@@ -10,6 +10,7 @@ const Footer = () => {
                     MIT license
                 </a>.
                 Powered by <a href="https://haveibeenpwned.com/">Have I been pwned?</a> and <a href="https://netlify.com">Netlify</a>.
+                Logos provided by <a href="https://clearbit.com/">Clearbit</a>.
             </p>
         </Segment>
     );

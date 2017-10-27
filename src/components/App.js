@@ -4,6 +4,7 @@ import Header from './Header';
 import Introduction from './Introduction';
 import Step from './Step';
 import Awareness from './Awareness';
+import EmailChecker from './EmailChecker';
 import Action from './Action';
 import Share from './Share';
 import Footer from './Footer';
@@ -32,6 +33,8 @@ class App extends React.Component {
 
                 <Step color="blue" title="Step 1. Understand the problem" />
                 <Awareness />
+
+                <EmailChecker />
 
                 <Step color="blue" title="Step 2. Take action" />
                 <Action />
