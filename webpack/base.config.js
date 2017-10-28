@@ -1,5 +1,7 @@
 const path = require('path');
 
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 module.exports = {
     output: {
         path: path.join(__dirname, '../public'),
@@ -15,11 +17,10 @@ module.exports = {
                     presets: ['env', 'react'],
                     plugins: ["transform-class-properties"]
                 }
-            },
-            {
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"]
             }
         ]
-    }
+    },
+    plugins: [
+        new ExtractTextPlugin('styles.css')
+    ]
 };

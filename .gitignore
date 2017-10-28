@@ -60,3 +60,7 @@ typings/
 # Vim
 *.swp
 *.swo
+
+# Generated files
+bundle.js
+styles.css
