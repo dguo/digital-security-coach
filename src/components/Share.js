@@ -3,7 +3,7 @@ import {Button, Container, Icon, Segment} from 'semantic-ui-react';
 
 const Share = () => {
     return (
-        <Segment id="share" attached padded textAlign="center">
+        <Segment id="share" attached textAlign="center">
             <Container text>
                 <p>
                     If you found this site helpful, you can share it with family and friends.

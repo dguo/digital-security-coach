@@ -3,7 +3,7 @@ import {Segment} from 'semantic-ui-react';
 
 const Footer = () => {
     return (
-        <Segment attached color="green" padded secondary textAlign="center">
+        <Segment attached color="green" secondary textAlign="center">
             <p>
                 Made by <a href="https://dannyguo.com">Danny Guo</a>.
                 Hosted on <a href="https://github.com/dguo/digital-security-coach">GitHub</a> with a <a href="https://github.com/dguo/digital-security-coach/blob/master/LICENSE">

@@ -180,7 +180,8 @@ class EmailChecker extends React.Component {
             </Table>
         ] : null;
 
-        const breachResults = this.state.hasResults ? (
+        const breachResults = this.state.hasResults ? [
+            <Divider hidden />,
             <Container text textAlign="left">
                 <p>
                     {'Your email address was found in '}
@@ -196,7 +197,7 @@ class EmailChecker extends React.Component {
                       greater.`}
                 </p>
             </Container>
-        ) : null;
+        ] : null;
 
         const pasteResults = this.state.hasResults ? [
             <Container text textAlign="left">
@@ -218,7 +219,7 @@ class EmailChecker extends React.Component {
         ] : null;
 
         return (
-            <Segment attached color="blue" padded textAlign="center">
+            <Segment attached color="blue" textAlign="center">
                 <Header as="h3" content="Check your email address" />
 
                 <Container text textAlign="left">
@@ -245,8 +246,6 @@ class EmailChecker extends React.Component {
                 {this.state.error ? (
                     <Message compact header={this.state.error} negative />
                 ) : null}
-
-                <Divider hidden />
 
                 {breachResults}
                 {breaches}

@@ -9,7 +9,7 @@ const SELLING_POINTS = [
 
 const Introduction = () => {
     return (
-        <Segment attached padded>
+        <Segment attached>
             <SUIHeader as="h2"
                 color="green"
                 content="Take a crash course on digital security."

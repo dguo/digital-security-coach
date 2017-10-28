@@ -53,7 +53,7 @@ class PasswordChecker extends React.Component {
 
     render() {
         return (
-            <Segment attached color="blue" padded textAlign="center">
+            <Segment attached color="blue" textAlign="center">
                 <Header as="h3" content="Check a password" />
 
                 <Container text textAlign="left">
