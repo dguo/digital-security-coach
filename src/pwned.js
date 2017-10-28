@@ -43,7 +43,7 @@ export function getPasteUrl(source, id) {
     }
 }
 
-export async function checkPassword(password) {
+export async function pwnedPassword(password) {
     const response = await fetch(`${API}/pwnedpassword/${password}`);
     if (response.status === 200) {
         return true;
