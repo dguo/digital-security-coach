@@ -9,7 +9,7 @@ import {
     Segment
 } from 'semantic-ui-react';
 
-import {pwnedPassword} from '../pwned';
+import {pwnedPassword, RATE_LIMIT_MS} from '../pwned';
 
 class PasswordChecker extends React.Component {
     constructor(props) {
@@ -19,18 +19,24 @@ class PasswordChecker extends React.Component {
             error: '',
             hasResult: false,
             loading: false,
-            pwned: false
+            pwned: false,
+            rateLimited: false
         };
     }
 
     handlePasswordSubmission = async e => {
+        if (this.state.rateLimited) {
+            return;
+        }
+
         const password = e.target.password.value;
 
         this.setState({
             error: password ? '' : 'Please enter a password.',
             hasResult: false,
             loading: Boolean(password),
-            pwned: false
+            pwned: false,
+            rateLimited: Boolean(password)
         });
 
         if (!password) {
@@ -49,6 +55,12 @@ class PasswordChecker extends React.Component {
                 loading: false
             });
         }
+
+        setTimeout(() => {
+            this.setState({
+                rateLimited: false
+            });
+        }, RATE_LIMIT_MS);
     }
 
     render() {
@@ -74,7 +86,9 @@ class PasswordChecker extends React.Component {
                     <Form.Input style={{maxWidth: '30em'}} name="password"
                         placeholder="Password" type="password" />
 
-                    <Button color="green" loading={this.state.loading}
+                    <Button color="green"
+                        disabled={this.state.rateLimited}
+                        loading={this.state.loading}
                         type="submit"
                     >
                         Submit

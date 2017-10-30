@@ -1,4 +1,5 @@
 const API = 'https://haveibeenpwned.com/api/v2';
+export const RATE_LIMIT_MS = 1510;
 
 export async function checkForBreaches(email) {
     const response = await fetch(`${API}/breachedaccount/${email}`);

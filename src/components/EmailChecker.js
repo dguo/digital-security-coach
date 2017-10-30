@@ -18,7 +18,8 @@ import {
 import {
     checkForBreaches,
     checkForPastes,
-    getPasteUrl
+    getPasteUrl,
+    RATE_LIMIT_MS
 } from '../pwned';
 
 function getFileCell(source, id, title) {
@@ -45,11 +46,16 @@ class EmailChecker extends React.Component {
             error: '',
             hasResults: false,
             loading: false,
-            pastes: []
+            pastes: [],
+            rateLimited: false
         };
     }
 
     handleEmailSubmission = async e => {
+        if (this.state.rateLimited) {
+            return;
+        }
+
         let email = e.target.email.value;
         email = email.trim();
 
@@ -58,7 +64,8 @@ class EmailChecker extends React.Component {
             error: email ? '' : 'Please enter your email address.',
             hasResults: false,
             loading: Boolean(email),
-            pastes: []
+            pastes: [],
+            rateLimited: Boolean(email)
         });
 
         if (!email) {
@@ -81,6 +88,12 @@ class EmailChecker extends React.Component {
                 loading: false,
             });
         }
+
+        setTimeout(() => {
+            this.setState({
+                rateLimited: false
+            });
+        }, RATE_LIMIT_MS);
     }
 
     render() {
@@ -236,7 +249,9 @@ class EmailChecker extends React.Component {
                     <Form.Input style={{maxWidth: '30em'}} name="email"
                         placeholder="Email address" type="email" />
 
-                    <Button color="green" loading={this.state.loading}
+                    <Button color="green"
+                        disabled={this.state.rateLimited}
+                        loading={this.state.loading}
                         type="submit"
                     >
                         Submit
