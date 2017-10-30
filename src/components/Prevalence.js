@@ -29,7 +29,7 @@ const Prevalence = () => {
                         people. Some of the information included names, Social Security numbers, addresses, birth dates, and driver's license numbers.
                     </List.Item>
                     <List.Item>
-                        <a href="https://www.washingtonpost.com/news/the-switch/wp/2014/05/21/ebay-asks-145-million-users-to-change-passwords-after-data-breach/">eBay was hacked in 2014</a>, leaking names, email addresses, physical addrsses, phone numbers and birth dates for up to 145 million users.
+                        <a href="https://www.washingtonpost.com/news/the-switch/wp/2014/05/21/ebay-asks-145-million-users-to-change-passwords-after-data-breach/">eBay was hacked in 2014</a>, leaking names, email addresses, addresses, phone numbers and birth dates for up to 145 million users.
                     </List.Item>
                 </List>
            </Container>
