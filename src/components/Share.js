@@ -6,7 +6,7 @@ const Share = () => {
         <Segment id="share" attached textAlign="center">
             <Container text>
                 <p>
-                    If you found this site helpful, you can share it with family and friends.
+                    If you found this guide helpful, please consider sharing it.
                 </p>
 
                 <Button as="a" color="black" compact

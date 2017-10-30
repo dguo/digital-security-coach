@@ -2,6 +2,10 @@ p, h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif !important;
 }
 
+img {
+    margin-bottom: 1em;
+}
+
 .green {
     color: #21ba45;
 }
@@ -16,7 +20,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 #selling-points {
-    width: 320px;
+    width: 325px;
     display: block;
     margin-left: auto;
     margin-right: auto;

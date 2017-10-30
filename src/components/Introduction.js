@@ -3,7 +3,7 @@ import {Header as SUIHeader, List, Segment} from 'semantic-ui-react';
 
 const SELLING_POINTS = [
     {point: "Free", description: "We aren't here to sell you anything."},
-    {point: "Quick", description: "We explain things with as little jargon and as few unnecessary details as possible, making this a quick read."},
+    {point: "Quick", description: "We try to explain things with only the important details, making this a quick read."},
     {point: "Easy", description: "We recommend solutions that are practical for the average person."}
 ];
 
