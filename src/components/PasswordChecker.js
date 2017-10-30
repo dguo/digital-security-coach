@@ -31,15 +31,22 @@ class PasswordChecker extends React.Component {
 
         const password = e.target.password.value;
 
+        let error = '';
+        if (!password) {
+            error = 'Please enter a password.';
+        } else if (!password.trim()) {
+            error = 'Password cannot be all whitespace.';
+        }
+
         this.setState({
-            error: password ? '' : 'Please enter a password.',
+            error,
             hasResult: false,
-            loading: Boolean(password),
+            loading: !error,
             pwned: false,
-            rateLimited: Boolean(password)
+            rateLimited: !error
         });
 
-        if (!password) {
+        if (error) {
             return;
         }
 
