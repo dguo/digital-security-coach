@@ -2,7 +2,9 @@ const API = 'https://haveibeenpwned.com/api/v2';
 export const RATE_LIMIT_MS = 1510;
 
 export async function checkForBreaches(email) {
-    const response = await fetch(`${API}/breachedaccount/${email}`);
+    const response = await fetch(
+        `${API}/breachedaccount/${encodeURIComponent(email)}`
+    );
     if (response.status === 200) {
         const json = await response.json();
         return json;
@@ -14,7 +16,9 @@ export async function checkForBreaches(email) {
 }
 
 export async function checkForPastes(email) {
-    const response = await fetch(`${API}/pasteaccount/${email}`);
+    const response = await fetch(
+        `${API}/pasteaccount/${encodeURIComponent(email)}`
+    );
     if (response.status === 200) {
         const json = await response.json();
         return json;
@@ -45,7 +49,9 @@ export function getPasteUrl(source, id) {
 }
 
 export async function pwnedPassword(password) {
-    const response = await fetch(`${API}/pwnedpassword/${password}`);
+    const response = await fetch(
+        `${API}/pwnedpassword/${encodeURIComponent(password)}`
+    );
     if (response.status === 200) {
         return true;
     } else if (response.status === 404) {
