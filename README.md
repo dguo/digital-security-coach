@@ -1,4 +1,4 @@
-# Digital Security Coach
+# Digital Security Coach [![CircleCI](https://circleci.com/gh/dguo/digital-security-coach.svg?style=svg)](https://circleci.com/gh/dguo/digital-security-coach)
 [Digital Security Coach](https://www.digitalsecuritycoach.com/) is a crash
 course on digital security. It is primarily intended for the average person who
 doesn't know what the difference is between

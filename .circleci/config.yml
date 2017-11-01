@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: node:8.8.1
+    steps:
+      - checkout
+      - run:
+          name: Install packages
+          command: yarn install
+      - run:
+          name: Check the code format
+          command: yarn run format:ci
+      - run:
+          name: Lint the code
+          command: yarn run lint
