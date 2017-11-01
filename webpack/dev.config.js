@@ -7,18 +7,17 @@ const webpack = require('webpack');
 const baseConfig = require('./base.config.js');
 
 module.exports = merge(baseConfig, {
-    entry: [
-        'react-hot-loader/patch',
-        path.join(__dirname, '../src/dev.js')
-    ],
+    entry: ['react-hot-loader/patch', path.join(__dirname, '../src/dev.js')],
     module: {
         rules: [
             {
                 test: /\.css$/,
-                use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: 'css-loader'
-                }))
+                use: ['css-hot-loader'].concat(
+                    ExtractTextPlugin.extract({
+                        fallback: 'style-loader',
+                        use: 'css-loader'
+                    })
+                )
             }
         ]
     },

@@ -4,7 +4,6 @@
         "react"
     ],
     "plugins": [
-        "react-hot-loader/babel",
-        "transform-class-properties"
+        "react-hot-loader/babel"
     ]
 }

@@ -19,12 +19,15 @@ const Consequences = () => {
                     sold, and one of the main things people do with that
                     information is to commit identity theft. Armed with your
                     information, someone else can open accounts in your name,
-                    apply for credit cards, and even file tax returns to try
-                    to steal your refunds.
+                    apply for credit cards, and even file tax returns to try to
+                    steal your refunds.
                 </p>
 
-                <Header as="h4" color="red"
-                    content="Hacked web cams and microphones" />
+                <Header
+                    as="h4"
+                    color="red"
+                    content="Hacked web cams and microphones"
+                />
 
                 <p>
                     Compromised devices can be used to activate your web cam
@@ -38,11 +41,11 @@ const Consequences = () => {
 
                 <p>
                     Ransomware refers to viruses that lock your device or files
-                    until you pay money to the hackers. Sometimes there will
-                    be a deadline, at which point the files are permanently
+                    until you pay money to the hackers. Sometimes there will be
+                    a deadline, at which point the files are permanently
                     deleted.
                 </p>
-           </Container>
+            </Container>
         </Segment>
     );
 };

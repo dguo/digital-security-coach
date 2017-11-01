@@ -12,7 +12,7 @@ const Awareness = () => {
                     can end up affecting you should make the problem less
                     abstract.
                 </p>
-           </Container>
+            </Container>
         </Segment>
     );
 };

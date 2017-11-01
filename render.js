@@ -2,6 +2,9 @@
    This should speed up the initial load, help search engine spiders,
    and allow a non-blank experience for users with JS turned off. */
 
+/* eslint-env node */
+/* eslint-disable no-console */
+
 import fs from 'fs';
 
 import React from 'react';

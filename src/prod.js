@@ -5,7 +5,4 @@ import ReactDOM from 'react-dom';
 
 import App from './components/App';
 
-ReactDOM.hydrate(
-    <App />,
-    document.getElementById('main')
-);
+ReactDOM.hydrate(<App />, document.getElementById('main'));

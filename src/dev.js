@@ -6,16 +6,18 @@ import {AppContainer} from 'react-hot-loader';
 
 import App from './components/App';
 
-const render = (Component) => {
+const render = Component => {
     ReactDOM.render(
         <AppContainer>
-            <Component/>
+            <Component />
         </AppContainer>,
         document.getElementById('main')
     );
 };
 
 render(App);
+
+/* global module, require */
 
 if (module.hot) {
     module.hot.accept('./components/App', () => {

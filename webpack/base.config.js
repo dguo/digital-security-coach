@@ -14,13 +14,10 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 options: {
-                    presets: ['env', 'react'],
-                    plugins: ["transform-class-properties"]
+                    presets: ['env', 'react']
                 }
             }
         ]
     },
-    plugins: [
-        new ExtractTextPlugin('styles.css')
-    ]
+    plugins: [new ExtractTextPlugin('styles.css')]
 };

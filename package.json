@@ -7,6 +7,10 @@
     "start": "yarn install && webpack-dev-server -d --config webpack/dev.config.js --progress",
     "build": "webpack -d --config webpack/dev.config.js --progress",
     "build:prod": "webpack -p --config webpack/prod.config.js && yarn prerender",
+    "ci": "yarn run format:ci && yarn run lint",
+    "format": "prettier --write '{src,webpack}/**/*.js' *.js",
+    "format:ci": "prettier --list-different '{src,webpack}/**/*.js' *.js",
+    "lint": "eslint '{src,webpack}/**/*.js' *.js",
     "prerender": "NODE_ENV=production babel-node render.js"
   },
   "repository": "https://github.com/dguo/digital-security-coach.git",
@@ -18,7 +22,6 @@
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
-    "babel-plugin-transform-class-properties": "6.24.1",
     "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.6.1",
     "babel-preset-react": "6.24.1",
@@ -36,5 +39,42 @@
     "webpack-dev-server": "2.9.3",
     "webpack-merge": "4.1.0",
     "whatwg-fetch": "2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "4.10.0",
+    "eslint-config-prettier": "2.6.0",
+    "eslint-plugin-react": "7.4.0",
+    "prettier": "1.7.4"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "prettier",
+      "prettier/react"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 8,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+        "react/jsx-key": "off",
+        "react/no-unescaped-entities": "off"
+    }
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "tabWidth": 4
   }
 }

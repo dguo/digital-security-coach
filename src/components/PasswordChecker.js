@@ -22,9 +22,13 @@ class PasswordChecker extends React.Component {
             pwned: false,
             rateLimited: false
         };
+
+        this.handlePasswordSubmission = this.handlePasswordSubmission.bind(
+            this
+        );
     }
 
-    handlePasswordSubmission = async e => {
+    async handlePasswordSubmission(e) {
         if (this.state.rateLimited) {
             return;
         }
@@ -77,8 +81,12 @@ class PasswordChecker extends React.Component {
 
                 <Container text textAlign="left">
                     <p>
-                        This will check if a password is
-                        in <a href="https://haveibeenpwned.com/">Have I been pwned?</a>'s list of passwords that have been exposed publicly. The password will not be sent to us, but do not submit a password that you actually use.
+                        This will check if a password is in{' '}
+                        <a href="https://haveibeenpwned.com/">
+                            Have I been pwned?
+                        </a>'s list of passwords that have been exposed
+                        publicly. The password will not be sent to us, but do
+                        not submit a password that you actually use.
                     </p>
                     <p>
                         Once a password has been exposed, it should not be used
@@ -90,10 +98,15 @@ class PasswordChecker extends React.Component {
                 <Divider hidden />
 
                 <Form onSubmit={this.handlePasswordSubmission}>
-                    <Form.Input style={{maxWidth: '30em'}} name="password"
-                        placeholder="Password" type="password" />
+                    <Form.Input
+                        style={{maxWidth: '30em'}}
+                        name="password"
+                        placeholder="Password"
+                        type="password"
+                    />
 
-                    <Button color="green"
+                    <Button
+                        color="green"
                         disabled={this.state.rateLimited}
                         loading={this.state.loading}
                         type="submit"
@@ -111,7 +124,9 @@ class PasswordChecker extends React.Component {
                         compact
                         positive={!this.state.pwned}
                         negative={this.state.pwned}
-                        header={`This password has ${this.state.pwned ? '' : 'not'} been compromised`}
+                        header={`This password has ${this.state.pwned
+                            ? ''
+                            : 'not'} been compromised`}
                         content={
                             this.state.pwned
                                 ? 'It should never be used again.'
