@@ -1,7 +1,7 @@
 {
   "name": "digital-security-coach",
   "version": "0.1.0",
-  "description": "WIP",
+  "description": "Crash course on digital security",
   "main": "src/entry.js",
   "scripts": {
     "start": "yarn install && webpack-dev-server -d --config webpack/dev.config.js --progress",
