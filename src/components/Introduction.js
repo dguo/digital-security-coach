@@ -2,7 +2,11 @@ import React from 'react';
 import {Header as SUIHeader, List, Segment} from 'semantic-ui-react';
 
 const SELLING_POINTS = [
-    {point: 'Free', description: "We aren't here to sell you anything."},
+    {
+        point: 'Free',
+        description:
+            "We aren't here to sell you anything. We don't make any money if you follow our suggestions, most of which are also free."
+    },
     {
         point: 'Quick',
         description:

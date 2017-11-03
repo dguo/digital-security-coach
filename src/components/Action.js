@@ -79,23 +79,26 @@ const Action = () => {
             <Container text textAlign="left">
                 <p>
                     There is no such thing as perfect security, but there are
-                    steps you can take to make it less likely that your data
-                    will be compromised. Do whatever you feel comfortable with.
-                    The goal is to make you more secure, and every bit helps.
+                    steps you can take to make it less likely that your digital
+                    life will be compromised. Do whatever you feel comfortable
+                    with. The goal is to make you more secure, and every bit
+                    helps.
                 </p>
             </Container>
         </Segment>,
         <Segment attached color="blue">
-            <Header
-                as="h3"
-                content="Don't give out your info in the first place"
-                textAlign="center"
-            />
+            <Header as="h3" content="Be vigilant" textAlign="center" />
             <Container text textAlign="left">
                 <p>
                     Hackers can't steal what doesn't exist. Be reluctant to give
                     websites personal information, and you'll keep your
                     potential exposure to a minimum.
+                </p>
+
+                <p>
+                    Don't click on sketchy links, download files from sources
+                    that you don't know, or install programs and apps without
+                    vetting them.
                 </p>
             </Container>
         </Segment>,
@@ -116,7 +119,7 @@ const Action = () => {
         <Segment attached color="blue">
             <Header
                 as="h3"
-                content="Sign up for Have I been pwned?"
+                content="Sign up for Have I Been Pwned"
                 textAlign="center"
             />
             <Container text textAlign="left">
@@ -155,10 +158,11 @@ const Action = () => {
                 </p>
 
                 <p>
-                    Whenever you are doing anything sensitive, like logging in
-                    or providing credit card information, it should be done over
-                    HTTPS. A website that allows these activities over HTTP is
-                    not secure. Take care to double check.
+                    Whenever you are doing anything particularly sensitive, like
+                    logging in or providing credit card information, it is
+                    especially important that it is done over HTTPS. A website
+                    that allows these activities over HTTP is failing to take a
+                    basic step to keep you secure. Take care to double check.
                 </p>
 
                 <p>
@@ -235,20 +239,21 @@ const Action = () => {
                 </p>
 
                 <p>
-                    Blocking ads is good for security because ads can be used to
-                    deliver viruses and other malicious software. This technique
-                    is called{' '}
+                    Blocking ads is good for security because ad networks can be
+                    used to deliver viruses and other malicious software. This
+                    technique is called{' '}
                     <a href="https://en.wikipedia.org/wiki/Malvertising">
                         malvertising
-                    </a>.
+                    </a>. You may also be uncomfortable with the amount of
+                    information ad companies are collecting on you.
                 </p>
 
                 <p>
                     Keep in mind that many content creators depend on
                     advertising for funding. If you do decide to use an ad
                     blocker, consider finding another way to support them, such
-                    as purchasing a subscription. You can also disable the ad
-                    blocker on a per-site basis.
+                    as purchasing a subscription, making a donation, or
+                    disabling the ad blocker on a per-site basis.
                 </p>
 
                 <Header as="h4" content="Desktop" />

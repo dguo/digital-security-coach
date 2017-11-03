@@ -244,7 +244,7 @@ class EmailChecker extends React.Component {
                           A paste is a file that is posted online. Hackers
                           regularly post public pastes containing personal
                           information. For more details regarding how pastes
-                          work, read the Have I been pwned?{' '}
+                          work, read the Have I Been Pwned{' '}
                           <a href="https://haveibeenpwned.com/Pastes">
                               explanation
                           </a>.
@@ -261,7 +261,7 @@ class EmailChecker extends React.Component {
                     <p>
                         This will check your email address with{' '}
                         <a href="https://haveibeenpwned.com/">
-                            Have I been pwned?
+                            Have I Been Pwned
                         </a>, which is a public service that collects
                         information regarding data breaches to help people
                         better understand their exposure. Your email address
