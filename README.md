@@ -1,7 +1,7 @@
 # Digital Security Coach [![CircleCI](https://circleci.com/gh/dguo/digital-security-coach.svg?style=svg)](https://circleci.com/gh/dguo/digital-security-coach)
 [Digital Security Coach](https://www.digitalsecuritycoach.com/) is a crash
 course on digital security. It is primarily intended for the average person who
-doesn't know what the difference is between
+doesn't know what hashing means, much less the difference between
 [MD5](https://en.wikipedia.org/wiki/MD5) and
 [bcrypt](https://en.wikipedia.org/wiki/Bcrypt). The goal is to create an
 accessible guide that doesn't assume a high level of technical knowledge and
