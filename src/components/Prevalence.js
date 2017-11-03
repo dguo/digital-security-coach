@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-    Container,
-    Header,
-    List,
-    Reveal,
-    Segment,
-    Statistic
-} from 'semantic-ui-react';
+import {Container, Header, List, Segment} from 'semantic-ui-react';
 
 const Prevalence = () => {
     return (
@@ -27,28 +20,9 @@ const Prevalence = () => {
                         survey
                     </a>{' '}
                     of small and medium sized business found that more than half
-                    reported being attacked in the past year. Guess how much
-                    money each company lost on average (damage to or theft of
-                    digital assets and disruption of operations):
-                </p>
-
-                <p>
-                    <Reveal animated="move left">
-                        <Reveal.Content visible>
-                            <p className="reveal-message">
-                                Hover or press to reveal
-                            </p>
-                        </Reveal.Content>
-                        <Reveal.Content hidden>
-                            <Statistic
-                                color="red"
-                                className="reveal-statistic"
-                                horizontal
-                                value="$1,835,011"
-                                size="mini"
-                            />
-                        </Reveal.Content>
-                    </Reveal>
+                    reported being attacked in the past year. On average, each
+                    company lost $1,835,011 due to disruption of operations and
+                    damage to or theft of digital assets.
                 </p>
 
                 <p>
