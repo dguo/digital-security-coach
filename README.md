@@ -12,9 +12,11 @@ grandparents to use a password manager than to convince software developers to
 set up their own VPN servers. Editorial decisions for this site should be guided
 by this philosophy.
 
-The site was originally created as an entry for [Have I been
-pwned?](https://haveibeenpwned.com/)'s [API
+The site was originally created as an entry for [Have I Been
+Pwned](https://haveibeenpwned.com/)'s [API
 contest](https://www.troyhunt.com/do-something-awesome-with-have-i-been-pwned-and-win-a-lenovo-thinkpad/).
+I also wrote a [blog
+post](https://www.dannyguo.com/blog/digital-security-coach/) about the site.
 
 ## Contributing
 Please feel free to submit issues or pull requests.
