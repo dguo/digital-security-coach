@@ -98,7 +98,7 @@ class EmailChecker extends React.Component {
                   <Container text textAlign="left">
                       <Item.Group divided>
                           {this.state.breaches.map(breach => (
-                              <Item>
+                              <Item key={breach.Title}>
                                   <Item.Image
                                       shape="rounded"
                                       size="tiny"
