@@ -19,7 +19,7 @@ class PasswordChecker extends React.Component {
             error: '',
             hasResult: false,
             loading: false,
-            pwned: false,
+            pwnedCount: null,
             rateLimited: false
         };
 
@@ -46,7 +46,7 @@ class PasswordChecker extends React.Component {
             error,
             hasResult: false,
             loading: !error,
-            pwned: false,
+            pwnedCount: null,
             rateLimited: !error
         });
 
@@ -58,7 +58,7 @@ class PasswordChecker extends React.Component {
             this.setState({
                 hasResult: true,
                 loading: false,
-                pwned: await pwnedPassword(password)
+                pwnedCount: await pwnedPassword(password)
             });
         } catch (error) {
             this.setState({
@@ -75,6 +75,25 @@ class PasswordChecker extends React.Component {
     }
 
     render() {
+        const pwned = Boolean(this.state.pwnedCount);
+
+        const header = pwned
+            ? `This password is compromised.`
+            : `As far as we know, this password has not been compromised.`;
+
+        let count = this.state.pwnedCount;
+        try {
+            if (count) {
+                count = new Intl.NumberFormat().format(count);
+            }
+        } catch (error) {
+            // eslint-disable-line no-empty
+        }
+
+        const message = pwned
+            ? `It has appeared at least ${count} times in breaches. It should never be used again.`
+            : `That's good news, but it could still be a bad password to use if it's too easy to guess.`;
+
         return (
             <Segment attached color="blue" textAlign="center">
                 <Header as="h3" content="Check a password" />
@@ -121,16 +140,10 @@ class PasswordChecker extends React.Component {
                 {this.state.hasResult ? (
                     <Message
                         compact
-                        positive={!this.state.pwned}
-                        negative={this.state.pwned}
-                        header={`This password has ${this.state.pwned
-                            ? ''
-                            : 'not'} been compromised`}
-                        content={
-                            this.state.pwned
-                                ? 'It should never be used again.'
-                                : `That's good news, but keep in mind it doesn't prove that this is a good password to use.`
-                        }
+                        positive={!pwned}
+                        negative={pwned}
+                        header={header}
+                        content={message}
                     />
                 ) : null}
             </Segment>
