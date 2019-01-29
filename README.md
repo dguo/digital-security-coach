@@ -1,4 +1,7 @@
-# Digital Security Coach [![CircleCI](https://circleci.com/gh/dguo/digital-security-coach.svg?style=svg)](https://circleci.com/gh/dguo/digital-security-coach)
+# Digital Security Coach 
+
+[![CircleCI](https://circleci.com/gh/dguo/digital-security-coach.svg?style=svg)](https://circleci.com/gh/dguo/digital-security-coach) [![Netlify Status](https://api.netlify.com/api/v1/badges/cd7d6890-ef77-411c-9d64-c693f346503e/deploy-status)](https://app.netlify.com/sites/digital-security-coach/deploys)
+
 [Digital Security Coach](https://www.digitalsecuritycoach.com/) is a crash
 course on digital security. It is primarily intended for the average person who
 doesn't know what hashing means, much less the difference between
