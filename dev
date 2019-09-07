@@ -21,7 +21,7 @@ def run(port=False):
     if port:
         command += ['-p', '127.0.0.1:8080:8080']
 
-    command.append('node:8.8.1')
+    command.append('node:12.10.0')
 
     return command
 
