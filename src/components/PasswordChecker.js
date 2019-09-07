@@ -103,12 +103,13 @@ class PasswordChecker extends React.Component {
                         This will check if a password is in{' '}
                         <a href="https://haveibeenpwned.com/">
                             Have I Been Pwned
-                        </a>'s list of passwords that have been publicly
-                        exposed. The password will not be sent to us, but do not
-                        submit a password that you actually use. Use this to
-                        better understand the point that many passwords are no
-                        longer safe to use. Once a password has been exposed, it
-                        should not be used again because hackers will try known
+                        </a>
+                        's list of passwords that have been publicly exposed.
+                        The password will not be sent to us, but do not submit a
+                        password that you actually use. Use this to better
+                        understand the point that many passwords are no longer
+                        safe to use. Once a password has been exposed, it should
+                        not be used again because hackers will try known
                         passwords to break into other services.
                     </p>
                 </Container>

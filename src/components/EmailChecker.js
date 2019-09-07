@@ -212,13 +212,15 @@ class EmailChecker extends React.Component {
                               }
                           >
                               {`${this.state.breaches.length}
-                          breach${this.state.breaches.length === 1
-                              ? ''
-                              : 'es'}.  `}
+                          breach${
+                              this.state.breaches.length === 1 ? '' : 'es'
+                          }.  `}
                           </span>
-                          {`${this.state.breaches.length === 0
-                              ? "That's good!"
-                              : ''}
+                          {`${
+                              this.state.breaches.length === 0
+                                  ? "That's good!"
+                                  : ''
+                          }
                       Keep in mind that there may be breaches that the service
                       doesn't know about, so your actual exposure may be
                       greater.`}
@@ -247,7 +249,8 @@ class EmailChecker extends React.Component {
                           work, read the Have I Been Pwned{' '}
                           <a href="https://haveibeenpwned.com/Pastes">
                               explanation
-                          </a>.
+                          </a>
+                          .
                       </p>
                   </Container>
               ]
@@ -262,10 +265,11 @@ class EmailChecker extends React.Component {
                         This will check your email address with{' '}
                         <a href="https://haveibeenpwned.com/">
                             Have I Been Pwned
-                        </a>, which is a public service that collects
-                        information regarding data breaches to help people
-                        better understand their exposure. Your email address
-                        will not be sent to us.
+                        </a>
+                        , which is a public service that collects information
+                        regarding data breaches to help people better understand
+                        their exposure. Your email address will not be sent to
+                        us.
                     </p>
                 </Container>
 

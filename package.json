@@ -1,91 +1,96 @@
 {
-  "name": "digital-security-coach",
-  "version": "0.1.0",
-  "description": "Crash course on digital security",
-  "main": "src/entry.js",
-  "scripts": {
-    "start": "yarn install && webpack-dev-server -d --config webpack/dev.config.js --progress",
-    "build": "webpack -d --config webpack/dev.config.js --progress",
-    "build:prod": "webpack -p --config webpack/prod.config.js && yarn prerender",
-    "ci": "yarn run format:ci && yarn run lint && yarn run test",
-    "format": "prettier --write '{src,webpack}/**/*.js' *.js",
-    "format:ci": "prettier --list-different '{src,webpack}/**/*.js' *.js",
-    "lint": "eslint '{src,webpack}/**/*.js' *.js",
-    "prerender": "NODE_ENV=production babel-node render.js",
-    "test": "jest --coverage"
-  },
-  "repository": "https://github.com/dguo/digital-security-coach.git",
-  "author": "Danny Guo",
-  "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "autotrack": "1.1.0",
-    "babel-cli": "6.26.0",
-    "babel-core": "6.26.0",
-    "babel-loader": "7.1.2",
-    "babel-polyfill": "6.26.0",
-    "babel-preset-env": "1.6.1",
-    "babel-preset-react": "6.24.1",
-    "css-hot-loader": "1.3.2",
-    "css-loader": "0.28.7",
-    "extract-text-webpack-plugin": "3.0.2",
-    "prop-types": "15.6.0",
-    "react": "16.0.0",
-    "react-dom": "16.0.0",
-    "react-hot-loader": "3.1.1",
-    "react-responsive": "3.0.0",
-    "semantic-ui-react": "0.75.1",
-    "sha1": "1.1.1",
-    "style-loader": "0.19.0",
-    "webpack": "3.8.1",
-    "webpack-dev-server": "2.9.3",
-    "webpack-merge": "4.1.0",
-    "whatwg-fetch": "2.0.3"
-  },
-  "devDependencies": {
-    "enzyme": "3.1.0",
-    "enzyme-adapter-react-16": "1.0.2",
-    "eslint": "4.10.0",
-    "eslint-config-prettier": "2.6.0",
-    "eslint-plugin-react": "7.4.0",
-    "jest": "21.2.1",
-    "prettier": "1.7.4"
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "es6": true,
-      "jest": true
+    "name": "digital-security-coach",
+    "version": "0.1.0",
+    "description": "Crash course on digital security",
+    "main": "src/entry.js",
+    "scripts": {
+        "start": "yarn install && webpack-dev-server -d --config webpack/dev.config.js --progress",
+        "build": "webpack -d --config webpack/dev.config.js --progress",
+        "build:prod": "webpack -p --config webpack/prod.config.js && yarn prerender",
+        "ci": "yarn run format:ci && yarn run lint && yarn run test",
+        "format": "prettier --write '{src,webpack}/**/*.js' *.js",
+        "format:ci": "prettier --list-different '{src,webpack}/**/*.js' *.js",
+        "lint": "eslint '{src,webpack}/**/*.js' *.js",
+        "prerender": "NODE_ENV=production babel-node render.js",
+        "test": "jest --coverage"
     },
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "prettier",
-      "prettier/react"
-    ],
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": 8,
-      "sourceType": "module"
+    "repository": "https://github.com/dguo/digital-security-coach.git",
+    "author": "Danny Guo",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "@babel/core": "7.6.0",
+        "@babel/node": "7.6.1",
+        "@babel/polyfill": "7.6.0",
+        "@babel/preset-env": "7.6.0",
+        "@babel/preset-react": "7.0.0",
+        "autotrack": "1.1.0",
+        "babel-loader": "8.0.6",
+        "css-hot-loader": "1.4.4",
+        "css-loader": "3.2.0",
+        "extract-text-webpack-plugin": "3.0.2",
+        "prop-types": "15.7.2",
+        "react": "16.9.0",
+        "react-dom": "16.9.0",
+        "react-hot-loader": "4.12.12",
+        "react-responsive": "3.0.0",
+        "semantic-ui-react": "0.75.1",
+        "sha1": "1.1.1",
+        "style-loader": "1.0.0",
+        "webpack": "4.39.3",
+        "webpack-dev-server": "3.8.0",
+        "webpack-merge": "4.2.2",
+        "whatwg-fetch": "2.0.3"
     },
-    "plugins": [
-      "react"
-    ],
-    "rules": {
-      "react/jsx-key": "off",
-      "react/no-unescaped-entities": "off"
+    "devDependencies": {
+        "enzyme": "3.10.0",
+        "enzyme-adapter-react-16": "1.14.0",
+        "eslint": "6.3.0",
+        "eslint-config-prettier": "6.2.0",
+        "eslint-plugin-react": "7.14.3",
+        "jest": "24.9.0",
+        "prettier": "1.18.2"
+    },
+    "eslintConfig": {
+        "env": {
+            "browser": true,
+            "es6": true,
+            "jest": true
+        },
+        "extends": [
+            "eslint:recommended",
+            "plugin:react/recommended",
+            "prettier",
+            "prettier/react"
+        ],
+        "parserOptions": {
+            "ecmaFeatures": {
+                "jsx": true
+            },
+            "ecmaVersion": 8,
+            "sourceType": "module"
+        },
+        "plugins": [
+            "react"
+        ],
+        "rules": {
+            "react/jsx-key": "off",
+            "react/no-unescaped-entities": "off"
+        },
+        "settings": {
+            "react": {
+                "version": "detect"
+            }
+        }
+    },
+    "jest": {
+        "setupFiles": [
+            "./src/jest-setup.js"
+        ]
+    },
+    "prettier": {
+        "bracketSpacing": false,
+        "singleQuote": true,
+        "tabWidth": 4
     }
-  },
-  "jest": {
-    "setupFiles": [
-      "./src/jest-setup.js"
-    ]
-  },
-  "prettier": {
-    "bracketSpacing": false,
-    "singleQuote": true,
-    "tabWidth": 4
-  }
 }

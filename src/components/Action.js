@@ -169,9 +169,9 @@ const Action = () => {
                     You can also install{' '}
                     <a href="https://www.eff.org/https-everywhere">
                         HTTPS Everywhere
-                    </a>, which is a free browser extension that will try to
-                    make as much of your web activity go through HTTPS as
-                    possible.
+                    </a>
+                    , which is a free browser extension that will try to make as
+                    much of your web activity go through HTTPS as possible.
                 </p>
             </Container>
         </Segment>,
@@ -244,7 +244,8 @@ const Action = () => {
                     technique is called{' '}
                     <a href="https://en.wikipedia.org/wiki/Malvertising">
                         malvertising
-                    </a>. You may also be uncomfortable with the amount of
+                    </a>
+                    . You may also be uncomfortable with the amount of
                     information ad companies are collecting on you.
                 </p>
 

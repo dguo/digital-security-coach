@@ -35,7 +35,8 @@ const Prevalence = () => {
                     <List.Item>
                         <a href="http://money.cnn.com/2017/10/03/technology/business/yahoo-breach-3-billion-accounts/index.html">
                             Yahoo was hacked in 2013
-                        </a>, leaking names, email addresses, and passwords for
+                        </a>
+                        , leaking names, email addresses, and passwords for
                         about 3 billion accounts across its various websites.
                     </List.Item>
                     <List.Item>
@@ -43,7 +44,8 @@ const Prevalence = () => {
                         agencies, was{' '}
                         <a href="https://www.consumer.ftc.gov/blog/2017/09/equifax-data-breach-what-do">
                             hacked in 2017
-                        </a>, leaking personal information for about 143 million
+                        </a>
+                        , leaking personal information for about 143 million
                         people. Some of the information included names, Social
                         Security numbers, addresses, birth dates, and driver's
                         license numbers.
@@ -51,14 +53,16 @@ const Prevalence = () => {
                     <List.Item>
                         <a href="https://www.washingtonpost.com/news/the-switch/wp/2014/05/21/ebay-asks-145-million-users-to-change-passwords-after-data-breach/">
                             eBay was hacked in 2014
-                        </a>, leaking names, email addresses, addresses, phone
+                        </a>
+                        , leaking names, email addresses, addresses, phone
                         numbers and birth dates for up to 145 million users.
                     </List.Item>
                     <List.Item>
                         <a href="https://www.usatoday.com/story/money/business/2014/11/06/home-depot-hackers-stolen-data/18613167/">
                             Home Depot was hacked in 2014
-                        </a>, leaking information for 56 million credit and
-                        debit cards.
+                        </a>
+                        , leaking information for 56 million credit and debit
+                        cards.
                     </List.Item>
                 </List>
             </Container>

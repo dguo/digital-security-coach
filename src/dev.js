@@ -17,7 +17,7 @@ const render = Component => {
 
 render(App);
 
-/* global module, require */
+/* global module */
 
 if (module.hot) {
     module.hot.accept('./components/App', () => {

@@ -82,9 +82,7 @@ const Consequences = () => {
                 <Header as="h4" color="red" content="Doxing" />
 
                 <p>
-                    <a href="https://en.wikipedia.org/wiki/Doxing">
-                        Doxing
-                    </a>{' '}
+                    <a href="https://en.wikipedia.org/wiki/Doxing">Doxing</a>{' '}
                     refers to the practice of finding personal information about
                     an individual and making it public. Sometimes the
                     information is already public (like on a social media
