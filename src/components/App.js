@@ -5,7 +5,6 @@ import Introduction from './Introduction';
 import Step from './Step';
 import Awareness from './Awareness';
 import Prevalence from './Prevalence';
-import EmailChecker from './EmailChecker';
 import PasswordChecker from './PasswordChecker';
 import Consequences from './Consequences';
 import Action from './Action';
@@ -24,8 +23,6 @@ class App extends React.Component {
                 <Awareness />
 
                 <Prevalence />
-
-                <EmailChecker />
 
                 <PasswordChecker />
 

@@ -33,7 +33,6 @@
     "react": "16.0.0",
     "react-dom": "16.0.0",
     "react-hot-loader": "3.1.1",
-    "react-responsive": "3.0.0",
     "semantic-ui-react": "0.75.1",
     "sha1": "1.1.1",
     "style-loader": "0.19.0",
