@@ -1,6 +1,7 @@
-# Digital Security Coach 
+# Digital Security Coach
 
-[![CircleCI](https://circleci.com/gh/dguo/digital-security-coach.svg?style=svg)](https://circleci.com/gh/dguo/digital-security-coach) [![Netlify Status](https://api.netlify.com/api/v1/badges/cd7d6890-ef77-411c-9d64-c693f346503e/deploy-status)](https://app.netlify.com/sites/digital-security-coach/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cd7d6890-ef77-411c-9d64-c693f346503e/deploy-status)](https://app.netlify.com/sites/digital-security-coach/deploys)
+[![CI status](https://github.com/dguo/digital-security-coach/workflows/CI/badge.svg)](https://github.com/dguo/digital-security-coach/actions?query=branch%3Amaster)
 
 [Digital Security Coach](https://www.digitalsecuritycoach.com/) is a crash
 course on digital security. It is primarily intended for the average person who
@@ -22,12 +23,15 @@ I also wrote a [blog
 post](https://www.dannyguo.com/blog/digital-security-coach/) about the site.
 
 ## Contributing
+
 Please feel free to submit issues or pull requests.
 
 ## Development
+
 If you have Python and Docker installed, you can run `$ ./dev start` to start a
 development server with hot code reloading. Otherwise, you'll need Node and
 Yarn. Then run `$ yarn start`.
 
 ## License
+
 [MIT](https://github.com/dguo/digital-security-coach/blob/master/LICENSE)
