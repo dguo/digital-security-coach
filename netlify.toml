@@ -1,6 +1,3 @@
 [build]
   command = "yarn run build:prod"
   publish = "public"
-
-[build.environment]
-  YARN_VERSION = "1.17.3"
