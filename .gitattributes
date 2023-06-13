@@ -1,2 +1,6 @@
 # Override core.autocrlf settings to keep line endings consistent
 * text=auto
+
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+/.yarn/releases/** binary
+/.yarn/plugins/** binary
