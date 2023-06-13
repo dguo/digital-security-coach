@@ -28,9 +28,7 @@ Please feel free to submit issues or pull requests.
 
 ## Development
 
-If you have Python and Docker installed, you can run `$ ./dev start` to start a
-development server with hot code reloading. Otherwise, you'll need Node and
-Yarn. Then run `$ yarn start`.
+Install Node.js and Yarn and run `yarn start`.
 
 ## License
 

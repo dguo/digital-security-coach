@@ -1,6 +1,6 @@
 [build]
   command = "yarn run build:prod"
   publish = "public"
-  [build.environment]
-    NODE_VERSION = "12.10.0"
-    YARN_VERSION = "1.17.3"
+
+[build.environment]
+  YARN_VERSION = "1.17.3"
